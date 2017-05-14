@@ -2,7 +2,7 @@
 1. Please have the Maven(version 3.3.9 or later) installed on your machine and have set up environment variables.
 2. Clone or Download this git project.
 3. On your command prompt navigate to the location where you saved this project and run the command:                  
-         ##   mvn clean verify -Dcucumber.options="--tags @implemented --tags ~@pending"
+               mvn clean verify -Dcucumber.options="--tags @implemented --tags ~@pending"
 4. If all tests executes okay you will see the “BUILD SUCCESS” message, Otherwise “BUILD FAILURE” message.
 5. Navigate to “{your_project_location}/target/reports/index.html” to see the test results.
 
@@ -14,7 +14,7 @@
 5. Scenario Outline: Verify sort functionality - implemented only for low to high price sort                
 
 
-## Scenarios that are unimplemented:
+## Scenarios that are not implemented:
 1. Scenario Outline: Verify Show More button appears if category has more than 6 options                    
 2. Scenario Outline: Verify page navigation                                                     
 3. Scenario Outline: Verify show more button functionality                                      
