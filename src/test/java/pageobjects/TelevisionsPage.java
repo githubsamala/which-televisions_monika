@@ -78,8 +78,9 @@ public class TelevisionsPage {
         executeUsingJavaScript((JavascriptExecutor) driver, firstAvailableAddToCompareButton);
     }
 
-    public void filterFor(WebDriver driver, String filerToSelect) throws InterruptedException {
-        executeUsingJavaScript((JavascriptExecutor) driver, brandSamsungFilterCheckbox);
+    public void filterFor(WebDriver driver, String filterToSelect) throws InterruptedException {
+        WebElement element = driver.findElement(By.xpath("//label[@for='brands_"+ filterToSelect.toLowerCase() + "']"));
+        executeUsingJavaScript((JavascriptExecutor) driver, element);
     }
 
     public boolean areAllProductsDisplayedBelongsTo(String expectedBrand) throws InterruptedException {

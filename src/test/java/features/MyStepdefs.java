@@ -5,10 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.TelevisionsPage;
 
@@ -63,8 +61,8 @@ public class MyStepdefs {
     }
 
     @When("^I filter for \"([^\"]*)\"$")
-    public void iFilterFor(String filerToSelect) throws Throwable {
-        televisionsPage.filterFor(driver, filerToSelect);
+    public void iFilterFor(String filterToSelect) throws Throwable {
+        televisionsPage.filterFor(driver, filterToSelect);
     }
 
     @Then("^I should only see \"([^\"]*)\" televisions$")
@@ -100,7 +98,7 @@ public class MyStepdefs {
         televisionsPage.selectValueFromSortDropDown(driver, dropdownSelectValue);
     }
 
-    @Then("^I should see televisions sorted from low to high$")
+    @Then("^I should see televisions sorted accordingly$")
     public void iShouldSeeTelevisionsSortedFromLowToHigh() throws Throwable {
         Assert.assertTrue(televisionsPage.pricesAreInAscendingOrder());
     }
