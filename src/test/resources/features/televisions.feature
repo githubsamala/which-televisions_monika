@@ -17,7 +17,8 @@ Feature: Verify the functionality of television landing page
     And I note televisions count
     When I filter for "samsung"
     Then it filters
-    When I clearAll the filteThen I should see original television count
+    When I clearAll the filter
+    Then I should see original television count
 
   Scenario: Verify sort works for price low to high
     When I sort "Price (low to high)"
@@ -27,11 +28,11 @@ Feature: Verify the functionality of television landing page
     Then I should see "Most-recently tested" selected by default
     And I should see the lastly tested televisions first
 
-#  Scenario: Verify multiple filters
-#    And I filter for “samsung”
-#    And I filter for “Full HD”
-#    Then I should see only samsung Full HD televisions
-#
-#  Scenario: Show More button shows all available filter options
-#    And I click on “Show more” under “Brands”
-#    Then I should see all the brands for filtering
+  Scenario: Verify multiple filters
+    And I filter for “samsung”
+    And I filter for “Full HD”
+    Then I should see only samsung Full HD televisions
+
+  Scenario: Show More button shows all available filter options
+    And I click on “Show more” under “Brands”
+    Then I should see all the brands for filtering
